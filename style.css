@@ -20,7 +20,7 @@ body {
 
 /* Intro */
 .intro {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,7 +39,7 @@ body {
 
 /* Lines */
 .line {
-  min-height: 60vh;
+  min-height: 60dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,7 +58,7 @@ body {
 
 /* Final */
 .final {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
