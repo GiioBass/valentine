@@ -128,12 +128,14 @@ body {
   position: absolute;
   top: -40px;
   width: 18px;
-  height: 18px;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 60% 40% 60% 40%;
-  filter: blur(0.5px);
+  height: 26px;
+  background: rgba(255, 200, 255, 0.65);
+  border-radius: 80% 20% 80% 20%;
+  transform: rotate(25deg);
+  filter: blur(0.4px);
   animation: fall linear forwards;
 }
+
 
 @keyframes fall {
   to {
