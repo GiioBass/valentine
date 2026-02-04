@@ -48,7 +48,6 @@ function updateCountdown() {
 
   countdownEl.textContent = 
     `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    console.log(countdownEl);
 
 }
 
