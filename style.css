@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Playfair Display', serif;
-  background: linear-gradient(180deg, #d8b4fe, #9333ea);
+  background: linear-gradient(180deg, #d3aaff, #8822e8);
   color: #2b2b2b;
   overflow-x: hidden;
 }
@@ -142,4 +142,66 @@ body {
     transform: translateY(110vh) rotate(360deg);
     opacity: 0;
   }
+}
+
+
+.gift-card {
+  width: 460px;
+  height: 540px;
+  margin: 20px auto 350px auto;
+  perspective: 1000px;
+}
+
+.gift-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.gift-card:hover .gift-inner,
+.gift-card:active .gift-inner {
+  transform: rotateY(180deg);
+}
+
+.gift-front,
+.gift-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.gift-front {
+  background: linear-gradient(135deg, #6a1b9a, #9c27b0);
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 20px;
+}
+
+.gift-back {
+  transform: rotateY(180deg);
+  background: #000;
+  overflow: hidden;
+}
+
+.gift-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.gift-title {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #f3d1ff;
+  margin-bottom: 16px;
 }
