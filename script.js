@@ -16,7 +16,7 @@ const observer = new IntersectionObserver(
 lines.forEach(line => observer.observe(line));
 
 // COUNTDOWN
-const overlay = document.getElementById('countdown-overlay');
+/*const overlay = document.getElementById('countdown-overlay');
 const countdownEl = document.getElementById('countdown');
 
 const targetDate = new Date();
@@ -52,7 +52,7 @@ function updateCountdown() {
 }
 
 updateCountdown();
-setInterval(updateCountdown, 1000);
+setInterval(updateCountdown, 1000);*/
 
 // PETALS
 const finalSection = document.querySelector('.final');
