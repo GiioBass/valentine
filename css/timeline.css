@@ -1,53 +1,70 @@
 body {
-      background-color: #121212;
-      color: #E0E0E0;
-      overflow-x: hidden;
-    }
-    /* Technical Grid Background */
-    .grid-bg {
-      background-image: 
-        linear-gradient(to right, rgba(66, 66, 66, 0.1) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(66, 66, 66, 0.1) 1px, transparent 1px);
-      background-size: 40px 40px;
-    }
-    /* Plumb Line (Central vertical line) */
-    .plumb-line {
-      position: fixed;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 1px;
-      background-color: #424242;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-    /* Animations */
-    .fade-in-up {
-      animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      opacity: 0;
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .line-stroke {
-      position: relative;
-    }
-    .line-stroke::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      height: 1px;
-      background-color: #F472B6;
-      width: 0;
-      transition: width 0.8s ease-out;
-    }
-    .left-entry .line-stroke::before {
-      right: -2rem;
-    }
-    .right-entry .line-stroke::before {
-      left: -2rem;
-    }
-    .active-line .line-stroke::before {
-      width: 2rem;
-    }
+  background-color: #121212;
+  color: #E0E0E0;
+  overflow-x: hidden;
+}
+
+/* Technical Grid Background */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(66, 66, 66, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(66, 66, 66, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Plumb Line (Central vertical line) */
+.plumb-line {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #F472B6;
+  opacity: 0.4;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Animations */
+.fade-in-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.line-stroke {
+  position: relative;
+}
+
+.line-stroke::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  background-color: #F472B6;
+  width: 0;
+  transition: width 0.8s ease-out;
+}
+
+.left-entry .line-stroke::before {
+  right: -2rem;
+}
+
+.right-entry .line-stroke::before {
+  left: -2rem;
+}
+
+.active-line .line-stroke::before {
+  width: 2rem;
+}
